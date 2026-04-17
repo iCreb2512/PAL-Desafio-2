@@ -1,4 +1,7 @@
-﻿using System;
+﻿// Program.cs - Menu principal
+// DESAFIO 2 | PAL404 | Grupo 01-02L | Docente: Edwin Bonilla
+
+using System;
 
 class Program
 {
