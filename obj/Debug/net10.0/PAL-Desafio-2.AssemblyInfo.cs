@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PAL-Desafio-2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+99fa0ff8045d84ba2e329093f0844b5366690415")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+545a609d61b11a656e260472f7ea92c3c12cfb58")]
 [assembly: System.Reflection.AssemblyProductAttribute("PAL-Desafio-2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PAL-Desafio-2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

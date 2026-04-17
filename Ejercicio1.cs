@@ -2,29 +2,59 @@ using System;
 
 class Ahorcado
 {
+    // arreglo de palabras
+    static string[] palabras = {
+        "computadora","algoritmo","variable","funcion","ciclo"
+    };
+
+    // elegir palabra aleatoria
+    static string SeleccionarPalabra()
+    {
+        Random r = new Random();
+        return palabras[r.Next(0, palabras.Length)];
+    }
+
+    // mostrar estado de la palabra
+    static void Mostrar(string palabra, char[] estado)
+    {
+        for (int i = 0; i < palabra.Length; i++)
+        {
+            if (estado[i] == '_')
+                Console.Write("_ ");
+            else
+                Console.Write(estado[i] + " ");
+        }
+        Console.WriteLine();
+    }
+
     static void Main()
     {
-        string palabra = "ciclo"; // palabra fija
-        char[] estado = { '_', '_', '_', '_', '_' }; // guiones iniciales
+        string palabra = SeleccionarPalabra();
 
-        int intentos = 0; // contador de errores
+        // inicializar guiones
+        char[] estado = new char[palabra.Length];
+        for (int i = 0; i < estado.Length; i++)
+            estado[i] = '_';
+
+        int intentos = 0;
 
         while (intentos < 6)
         {
             Console.Clear();
+            Mostrar(palabra, estado);
 
-            // mostrar palabra
-            Console.Write("Palabra: ");
-            for (int i = 0; i < estado.Length; i++)
-                Console.Write(estado[i] + " ");
+            // leer letra
+            Console.Write("Letra: ");
+            string entrada = Console.ReadLine().ToLower();
 
-            // pedir letra
-            Console.Write("\nLetra: ");
-            char letra = Console.ReadLine()[0];
+            // validar entrada
+            if (entrada.Length != 1)
+                continue;
 
+            char letra = entrada[0];
             bool acierto = false;
 
-            // buscar letra
+            // buscar coincidencias
             for (int i = 0; i < palabra.Length; i++)
             {
                 if (palabra[i] == letra)
@@ -34,28 +64,24 @@ class Ahorcado
                 }
             }
 
-            // sumar error si falla
             if (!acierto)
                 intentos++;
 
-            // verificar victoria
-            bool gano = true;
+            // revisar si ya completó
+            bool completo = true;
             for (int i = 0; i < estado.Length; i++)
             {
                 if (estado[i] == '_')
-                {
-                    gano = false;
-                    break;
-                }
+                    completo = false;
             }
 
-            if (gano)
+            if (completo)
             {
-                Console.WriteLine("\nGanaste");
+                Console.WriteLine("Ganaste");
                 break;
             }
         }
 
-        Console.WriteLine("\nFin del juego");
+        Console.WriteLine("La palabra era: " + palabra);
     }
 }
