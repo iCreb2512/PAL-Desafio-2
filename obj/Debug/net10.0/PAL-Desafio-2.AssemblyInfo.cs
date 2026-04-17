@@ -13,7 +13,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PAL-Desafio-2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< Updated upstream
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4bf4cd3ffb9674314d476aabdcddd1c7dc27abd2")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+598973aff97a1a2dba03b93094fd6969445ef2b3")]
+>>>>>>> Stashed changes
 [assembly: System.Reflection.AssemblyProductAttribute("PAL-Desafio-2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PAL-Desafio-2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
