@@ -20,7 +20,7 @@ class Program
             Console.WriteLine("----------------------------------------------");
             Console.Write("  Opcion: ");
 
-            string entrada = Console.ReadLine();
+            string entrada = Console.ReadLine() ?? "";
 
             if (!int.TryParse(entrada, out opcion))
                 opcion = 0;
